@@ -16,5 +16,5 @@ jobs:
       with:
         server: ftp.ziainnovation.com
         username: test_git@git.ziainnovation.com
-        password: ${{ secrets.password }}
+        password: ${{ secrets.PASSWORD }}
         server-dir: git.ziainnovation.com/git_test
