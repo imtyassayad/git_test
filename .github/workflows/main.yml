@@ -1,7 +1,4 @@
-on: 
-  push:
-    branches:
-      - main 
+on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -10,11 +7,14 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.ziainnovation.com
-        username: test_git@git.ziainnovation.com
+        server: ftp.samkirkland.com
+        username: myFtpUserName
         password: ${{ secrets.PASSWORD }}
+        protocol: ftps
+        port: 21
+       
        
